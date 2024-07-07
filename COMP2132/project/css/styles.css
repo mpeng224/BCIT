@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #3498db;
+  position: relative;
+  display: inline-block;
+}
+h1 .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+h1 .tooltip-container .tooltip-icon {
+  cursor: pointer;
+  border: 1px solid #3498db;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 10px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+}
+h1 .tooltip-container .tooltip {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  border: 1px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn 0.5s forwards;
+  z-index: 1000;
+}
+h1 .tooltip-container .tooltip p {
+  margin: 0;
+}
+h1 .tooltip-container:hover .tooltip {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+}
+.game-board .player-section, .game-board .computer-section {
+  width: 45%;
+}
+.game-board .round-tracker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.game-board .dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-board .dice img {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+.controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #3498db;
+  cursor: pointer;
+}
+.controls button:hover {
+  background-color: #217dbb;
+}
+.controls button:nth-child(2) {
+  background-color: #2ecc71;
+}
+.controls button:nth-child(2):hover {
+  background-color: #25a25a;
+}
+
+.result {
+  margin-top: 20px;
+}
+.result h2 {
+  color: #3498db;
+}

@@ -1,0 +1,57 @@
+<!-- Mark Peng COMP2132 Final Project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Dice Game 
+            <div class="tooltip-container">
+                <span class="tooltip-icon">?</span>
+                <div class="tooltip">
+                    <p>The user and the computer each roll a pair of dice 3 times. The player with the highest score wins. 
+                    <ul><li>If any die shows a 1, the score for that round is 0.</li>
+                    <li>If both dice show the same number, the score is doubled.</li>
+                    <li>Otherwise, the score is the sum of the two dice.</li></ul></p>
+                </div>
+            </div>
+        </h1>
+        <div class="game-board">
+            <div class="player-section">
+                <h2>Player</h2>
+                <div class="dice">
+                    <img id="player-die1" src="images/dice1.png" alt="Die">
+                    <img id="player-die2" src="images/dice1.png" alt="Die">
+                </div>
+                <p>Score: <span id="player-round-score">0</span></p>
+                <p>Total Score: <span id="player-total-score">0</span></p>
+            </div>
+            <div class="round-tracker">
+                <h2>Round <span id="round-number">1</span> of 3</h2>
+            </div>
+            <div class="computer-section">
+                <h2>Computer</h2>
+                <div class="dice">
+                    <img id="computer-die1" src="images/dice1.png" alt="Die">
+                    <img id="computer-die2" src="images/dice1.png" alt="Die">
+                </div>
+                <p>Score: <span id="computer-round-score">0</span></p>
+                <p>Total Score: <span id="computer-total-score">0</span></p>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="roll-btn">Roll Dice</button>
+            <button id="reset-btn">Reset Game</button>
+        </div>
+        <div class="result">
+            <h2 id="result-message"></h2>
+        </div>
+    </div>
+</body>
+</html>
